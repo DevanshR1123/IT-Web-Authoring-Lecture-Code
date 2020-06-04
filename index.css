@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #444444;
+    width: 100vw;
+}
+
+.lectures {
+    all: unset;
+    background: #333333;
+    width: 100%;
+}
+
+.lectOpt {
+    display: inline;
+
+}
+
+a {
+    all: unset;
+    color: inherit;
+}
+
+.opt {
+    color: #aeaeae;
+    margin: 0;
+    padding: 0.25em;
+    transition: all ease-in-out 100ms;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+    font-weight: 900;
+}
+
+.opt:hover,
+.opt:focus,
+.opt:focus-within {
+    background-color: #a3a3a3;
+    color: #333333;
+}
+
+.lectList {
+    position: relative;
+}
+
+.dd {
+    display: none;
+    list-style-type: none;
+    position: absolute;
+    left: -6%;
+    top: 100%;
+    width: 116%;
+    background-color: #444444;
+    text-align: center;
+    padding: 0.1em;
+}
+
+.dd>li {
+    margin: .25em 0;
+}
+
+.lectList:hover .dd {
+    display: inline-block
+}
+
+.ifr {
+    height: 100%;
+    width: 100%;
+    border: 2px solid gray;
+    background: #ffffff;
+}
+
+.container {
+    height: 97vh;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 4px;
+}
+
+.srcCode {
+    background: white;
+    padding: 1em;
+    border: 2px solid gray;
+    font-size: 16pt;
+
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Lectures</title>
+    <base href="./lectures/">
+    <link rel="stylesheet" href="../index.css">
+</head>
+
+<body>
+    <ul class="lectures">
+        <li class="lectOpt opt"><a href="./lecture_1.html" target="ifr">Lecture 1</a></li>
+        <li class="lectOpt lectList opt">Lecture 2
+            <ul class="dd">
+                <li><a class="opt" href="./lecture_2.1.html" target="ifr">Lecture 2.1</a></li>
+                <li><a class="opt" href="./lecture_2.2.html" target="ifr">Lecture 2.2</a></li>
+                <li><a class="opt" href="./lecture_2.3.html" target="ifr">Lecture 2.3</a></li>
+            </ul>
+        </li>
+        <li class="lectOpt opt"><a href="./lecture_3.html" target="ifr">Lecture 3</a></li>
+    </ul>
+    <div class="container">
+        <iframe src="./lecture_1.html" name="ifr" class="ifr" id="ifr" onload="getSource()"></iframe>
+        <code id="srcCode" class="srcCode"></code>
+    </div>
+</body>
+<script>
+    function getSource() {
+        ptrn = /<!-- Code injected by live-server -->\n<script[\s\S]*script>\n\n/
+        document.getElementById('srcCode').innerText = document.getElementById('ifr')
+            .contentWindow.document
+            .documentElement.outerHTML.replace(ptrn, '')
+    }
+</script>
+
+</html>
