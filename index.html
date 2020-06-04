@@ -28,10 +28,9 @@
 </body>
 <script>
     function getSource() {
-        ptrn = /<!-- Code injected by live-server -->\n<script[\s\S]*script>\n\n/
         document.getElementById('srcCode').innerText = document.getElementById('ifr')
             .contentWindow.document
-            .documentElement.outerHTML.replace(ptrn, '')
+            .documentElement.outerHTML
     }
 </script>
 
