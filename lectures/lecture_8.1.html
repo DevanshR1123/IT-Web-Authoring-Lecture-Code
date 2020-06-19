@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lecture 8.1</title>
+</head>
+<body>
+<html>
+<body>
+<p>You can apply for a licence to drive when you are 16 years old.</p>
+<p>To check if you are old enough to drive, input your age and click the button:</p>
+
+<input id="AgeNow" value="16">
+
+<button onclick="CheckAgeFunction()">Check now</button>
+
+<p id="AgeCheck"></p>
+
+	<script>
+		var CanApply,AgeNow;
+		function CheckAgeFunction(){
+			AgeNow = +document.getElementById("AgeNow").value;
+
+			if (isNaN(AgeNow)) CanApply = "Please enter your age in numbers.";
+			else CanApply =  (AgeNow > 15) ?  "You are old enough to apply for a licence.":"You are too young to apply for a licence." ;
+			console.log('clicked')
+			document.getElementById("AgeCheck").innerHTML = CanApply;
+		}
+	</script>
+</body>
+</html>
+</body>
+</html>
